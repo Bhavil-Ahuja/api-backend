@@ -7,6 +7,10 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send("Hello World!");
+});
+
 app.post('/', (req, res) => {
     const data = req.body.apiString;
     // console.log(typeof(data));
